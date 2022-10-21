@@ -7,12 +7,9 @@ print("Starting system...")
 # Basics
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
-SESSION = config("SESSION")
 FROM_ = config("FROM_CHANNEL")
 TO_ = config("TO_CHANNEL")
-#Global
-messageTip = 0
-analyzeBet = 0
+
 
 FROM = [int(i) for i in FROM_.split()]
 TO = [int(i) for i in TO_.split()]
