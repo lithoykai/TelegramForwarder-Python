@@ -25,7 +25,7 @@ except Exception as ap:
     exit(1)
 
 @BotUser.on_message(filters.chat(FROM) & filters.incoming)
-async def work(message):
+async def work(client, message):
 
     for i in TO:
         
