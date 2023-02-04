@@ -1,6 +1,7 @@
 from pyrogram import Client
 from decouple import config
 from pyrogram import filters
+from pyrogram.types import InputMediaPhoto, InputMediaVideo
 
 print("Starting system...")
 
@@ -13,9 +14,8 @@ TO_ = config("TO_CHANNEL")
 
 FROM = [int(i) for i in FROM_.split()]
 TO = [int(i) for i in TO_.split()]
-
 try:
-    BotUser = Client('BiroZord', APP_ID, API_HASH, workers= 6) #your user is necessary to receive messages
+    BotUser = Client('BotUser', APP_ID, API_HASH, workers= 6) #your user is necessary to receive messages
     #if you want use yout bot to send message: 
     # Bot = Client('Bot',APP_ID, API_HASH, bot_token= "" ) 
     # Bot.start()
